@@ -1,0 +1,586 @@
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BHEEM — Editorial Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#66754f",
+                    "primary-container": "#66754f",
+                    "surface-variant": "#e8e2d4",
+                    "on-primary-container": "#eafbcc",
+                    "inverse-on-surface": "#f7f0e2",
+                    "surface-container": "#f4eddf",
+                    "surface": "#fff9ec",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#131f03",
+                    "on-primary": "#F4F1E8",
+                    "surface-bright": "#fff9ec",
+                    "on-tertiary-fixed": "#1b1b1b",
+                    "secondary-container": "#dbe4c2",
+                    "on-secondary-fixed-variant": "#424a31",
+                    "secondary-fixed": "#dde6c5",
+                    "inverse-primary": "#bccda0",
+                    "tertiary-container": "#706f6f",
+                    "on-surface": "#1e1c13",
+                    "surface-container-low": "#f9f3e5",
+                    "outline-variant": "#C6C1B4",
+                    "surface-container-highest": "#e8e2d4",
+                    "on-background": "#1e1c13",
+                    "on-secondary-fixed": "#171e09",
+                    "secondary-fixed-dim": "#c1caaa",
+                    "on-primary-fixed-variant": "#3d4b29",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "surface-tint": "#55633f",
+                    "tertiary": "#585757",
+                    "secondary": "#596247",
+                    "on-tertiary-container": "#f7f4f3",
+                    "on-secondary-container": "#5d664b",
+                    "on-surface-variant": "#45483e",
+                    "primary-fixed": "#d8e9bb",
+                    "primary-fixed-dim": "#bccda0",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#333027",
+                    "tertiary-fixed": "#e5e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#76786d",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#dfdacc",
+                    "background": "#fff9ec",
+                    "surface-container-high": "#eee8da",
+                    "on-tertiary-fixed-variant": "#474746"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "grid-max": "1280px",
+                    "gutter": "24px",
+                    "margin-tablet": "40px",
+                    "section-gap": "160px",
+                    "container-max": "896px",
+                    "margin-desktop": "80px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Hanken Grotesk"],
+                    "display-xl-mobile": ["Bebas Neue"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Bebas Neue"],
+                    "display-lg": ["Bebas Neue"],
+                    "display-xl": ["Bebas Neue"],
+                    "label-editorial": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Bebas Neue"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-xl-mobile": ["60px", {"lineHeight": "60px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "48px", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                    "display-lg": ["80px", {"lineHeight": "80px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "display-xl": ["120px", {"lineHeight": "110px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "label-editorial": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "36px", "letterSpacing": "0.05em", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #fff9ec;
+            color: #1e1c13;
+            overflow-x: hidden;
+            cursor: none;
+        }
+        
+        .grain-overlay {
+            position: fixed;
+            top: -150%;
+            left: -150%;
+            width: 400%;
+            height: 400%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.12;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAUnZf2wdpeVrPhJTkBz66f1CuBIvrjvJWyFgvtDRic1q3Rzs21OybojAYKz8V6mJNoEnBqwOzz93l8NeNIXuZNaLc8LO2tURZTCvUhn1kKttdG6L4GeO3JYfupWBSCDcXeyry6IBuVO9GvwIJtpIOoxo4HPG1cKDOaUjjHe3SjdF0JkS-exycMrNWyrfxa_6wLTAsT1BQCrUIR-eWSiKC1AvM9a4FiiYPDAUCCt-p6Np7cmUN_jyGwidX8F6IaesXmzV1CagPbd0JV);
+            animation: grain 8s steps(10) infinite;
+        }
+
+        @keyframes grain {
+            0%, 100% { transform:translate(0, 0) }
+            10% { transform:translate(-5%, -10%) }
+            20% { transform:translate(-15%, 5%) }
+            30% { transform:translate(7%, -25%) }
+            40% { transform:translate(-5%, 25%) }
+            50% { transform:translate(-15%, 10%) }
+            60% { transform:translate(15%, 0%) }
+            70% { transform:translate(0%, 15%) }
+            80% { transform:translate(3%, 35%) }
+            90% { transform:translate(-10%, 10%) }
+        }
+
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #66754f;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 10000;
+            transition: transform 0.15s ease-out, background-color 0.3s, border-color 0.3s, width 0.3s, height 0.3s;
+            transform: translate(-50%, -50%);
+        }
+
+        .custom-cursor.hovering {
+            transform: translate(-50%, -50%) scale(2.5);
+            background-color: rgba(102, 117, 79, 0.1);
+            border-color: transparent;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-1 { transition-delay: 0.1s }
+        .stagger-2 { transition-delay: 0.2s }
+        .stagger-3 { transition-delay: 0.3s }
+        .stagger-4 { transition-delay: 0.4s }
+
+        .progress-bar {
+            width: 0%;
+            transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+        .progress-bar.animate {
+            width: var(--target-width);
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 20px rgba(102, 117, 79, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .social-hover:hover {
+            text-shadow: 0 0 8px rgba(188, 205, 160, 0.6);
+        }
+
+        /* Modal Transitions */
+        #gallery-modal {
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #gallery-modal.hidden {
+            display: none;
+            opacity: 0;
+        }
+        #gallery-modal.flex {
+            display: flex;
+            opacity: 1;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+
+        .gallery-image-wrapper {
+            overflow: hidden;
+            position: relative;
+            background-color: #DED9CC;
+        }
+        .gallery-image-wrapper img {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1)
+        }
+        .gallery-image-wrapper:hover img {
+            transform: scale(1.08)
+        }
+    </style></head>
+<body class="font-body-md antialiased">
+<div class="grain-overlay"></div>
+<div class="custom-cursor" id="cursor"></div>
+<!-- Modal Overlay for Gallery -->
+<div class="fixed inset-0 z-[100] bg-background/95 backdrop-blur-xl hidden flex-col p-6 md:p-12 overflow-y-auto" id="gallery-modal">
+<div class="flex justify-between items-center mb-12">
+<h2 class="font-display-lg text-display-lg text-primary uppercase" id="gallery-title">COLLECTION</h2>
+<button class="group flex items-center gap-4 text-on-surface hover:text-primary transition-colors" id="close-modal">
+<span class="font-label-sm uppercase tracking-widest">CLOSE</span>
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<div class="max-w-grid-max mx-auto w-full mb-12" id="gallery-header-content">
+<div class="relative overflow-hidden mb-16">
+<div class="absolute -bottom-10 -left-10 opacity-[0.03] pointer-events-none select-none">
+<h2 class="font-display-xl text-display-xl text-primary leading-none">FRAME BY FRAME</h2>
+</div>
+<div class="relative z-10">
+<span class="font-label-editorial text-label-editorial text-primary/60 block mb-4 uppercase">CURATED SERIES 01</span>
+<h2 class="font-display-xl text-display-xl-mobile md:text-display-xl text-primary leading-none uppercase tracking-tight" id="modal-dynamic-title">LIGHTROOM<br/><span class="opacity-40">COLLECTION</span></h2>
+<p class="mt-8 max-w-xl font-body-lg text-body-lg text-on-surface-variant leading-relaxed" id="modal-dynamic-description"></p>
+</div>
+</div>
+</div>
+<div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6" id="gallery-content"></div>
+<div class="mt-32 border-t border-outline-variant py-24 flex flex-col items-center" id="gallery-footer-cta">
+<div class="font-label-editorial text-label-editorial text-primary/40 tracking-[1em] mb-12 uppercase">END OF SERIES</div>
+<button class="group relative inline-flex items-center gap-4 px-12 py-6 border border-primary text-primary font-display-lg text-headline-lg-mobile uppercase overflow-hidden transition-all duration-500 hover:text-on-primary active:scale-95 shadow-[0_0_20px_rgba(78,92,56,0.1)] hover:shadow-[0_0_30px_rgba(78,92,56,0.3)]" onclick="document.getElementById('close-modal').click()">
+<span class="relative z-10">BACK TO PORTFOLIO</span>
+<span class="material-symbols-outlined relative z-10 transition-transform group-hover:-translate-x-2">arrow_back</span>
+<div class="absolute inset-0 bg-primary translate-y-full transition-transform duration-500 group-hover:translate-y-0"></div>
+</button>
+</div>
+</div>
+<!-- Navigation -->
+<header class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-none top-0 sticky z-50 bg-background/80 backdrop-blur-sm border-b border-outline-variant/30 transition-all duration-500">
+<div class="font-headline-lg text-headline-lg text-primary tracking-tighter uppercase cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">BHEEM</div>
+<nav class="hidden md:flex gap-12" id="main-nav">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface hover:text-primary transition-colors duration-300 relative group" href="#hero">WORK</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface hover:text-primary transition-colors duration-300 relative group" href="#about">ABOUT</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface hover:text-primary transition-colors duration-300 relative group" href="#services">SERVICES</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface hover:text-primary transition-colors duration-300 relative group" href="#journey">JOURNEY</a>
+</nav>
+<a class="font-label-sm text-label-sm uppercase tracking-widest px-6 py-2 border border-primary text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 active:scale-95 btn-glow" href="#contact">CONTACT</a>
+</header>
+<main id="main-content">
+<!-- Section 1: Hero -->
+<section class="relative min-h-screen flex flex-col md:flex-row items-center justify-between px-margin-mobile md:px-margin-desktop pt-12 md:pt-0 overflow-hidden" id="hero">
+<div class="w-full md:w-1/2 flex flex-col justify-center order-2 md:order-1 mt-12 md:mt-0 z-10">
+<h1 class="font-display-xl text-[80px] md:text-display-xl uppercase leading-none tracking-tight text-primary reveal">PORTFOLIO</h1>
+<div class="mt-8 space-y-4 reveal stagger-1">
+<p class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-secondary">Graphic Designer • Editor • Visual Creator</p>
+<p class="font-body-lg text-body-lg max-w-md text-on-surface leading-relaxed">Crafting high-impact cinematic experiences through modern digital aesthetics and meticulous visual storytelling.</p>
+<div class="pt-8">
+<a class="inline-block bg-primary text-on-primary px-10 py-5 font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary-container transition-all duration-500 btn-glow" href="#about">Explore Work</a>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex justify-end order-1 md:order-2">
+<div class="relative w-full aspect-[4/5] md:w-[80%] reveal stagger-2">
+<img alt="Bheem Portrait" class="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXJQY15nJqlJxrusLIt7iLCM1EHiCIUdbglCGHSlfajRFxcpWFxRyFKKlQSY2QvPKUNI-EnnBO5QioHdv1flGiEVSC7kQhJ6iFXX4_1dMC_WkyVUmKK_VNVTuwqDjNg3217esf9527xCz5w7BWqHHcEMXEKlHeL0Gp16_cnyta40_rxGOYeDWQ9AFQ91WFkKEOfyuBbMBBaOJJp14XmGX4swx6D-Xo_gJ3J1Z4rXDTmGrwaRHBDmjqekkxP7ZJn6MbM0tDooBaboMa"/>
+<div class="absolute -bottom-8 -left-8 font-display-lg text-display-lg text-primary-fixed-dim opacity-40 select-none pointer-events-none">BHEEM</div>
+</div>
+</div>
+</section>
+<!-- Section 2: WHO I AM -->
+<section class="section-gap px-margin-mobile md:px-margin-desktop py-section-gap overflow-hidden" id="about">
+<div class="max-w-4xl mx-auto reveal">
+<h2 class="font-display-lg text-display-lg text-primary uppercase mb-12">WHO I AM</h2>
+<div class="space-y-12">
+<p class="font-display-lg text-4xl md:text-6xl text-on-surface leading-tight">I am a visual storyteller obsessed with the intersection of motion and stillness. My work is driven by a passion for cinematic visuals, finding beauty in the grit and refinement in the chaos.</p>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl leading-relaxed">Based in India, I specialize in creating digital identities that resonate on a visceral level. Every frame, every pixel, and every cut is an intentional choice aimed at evoking emotion and authority.</p>
+</div>
+</div>
+</section>
+<!-- Section 3: SOFTWARE PROFICIENCY -->
+<section class="bg-primary text-on-primary py-32 px-margin-mobile md:px-margin-desktop overflow-hidden" id="software">
+<div class="max-w-screen-xl mx-auto">
+<h2 class="font-display-lg text-[60px] md:text-[120px] uppercase mb-20 text-center reveal">SOFTWARE PROFICIENCY</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Lightroom -->
+<div class="border border-on-primary/20 group hover:bg-on-primary hover:text-primary transition-all duration-500 reveal stagger-1 cursor-pointer p-16" id="trigger-lightroom">
+<div class="mb-10 flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl">photo_filter</span>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity text-2xl">open_in_full</span>
+</div>
+<h3 class="font-display-lg text-headline-lg uppercase mb-6">Adobe Lightroom</h3>
+<p class="font-label-sm text-label-editorial uppercase tracking-[0.2em] opacity-70 mb-10">Colour Grading • RAW Processing</p>
+<div class="w-full h-[2px] bg-on-primary/20 relative">
+<div class="absolute left-0 top-0 h-full bg-on-primary progress-bar group-hover:bg-primary" style="--target-width: 95%;"></div>
+</div>
+<div class="mt-10 flex flex-col gap-4">
+<p class="font-label-sm text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-60 transition-opacity">CLICK TO VIEW COLLECTION</p>
+<p class="font-label-editorial text-[10px] uppercase tracking-[0.4em] opacity-40">TAP ON LOGO TO VIEW IT</p>
+</div>
+</div>
+<!-- Photoshop -->
+<div class="border border-on-primary/20 group hover:bg-on-primary hover:text-primary transition-all duration-500 reveal stagger-2 cursor-pointer p-16" id="trigger-photoshop">
+<div class="mb-10 flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl">layers</span>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity text-2xl">open_in_full</span>
+</div>
+<h3 class="font-display-lg text-headline-lg uppercase mb-6">Adobe Photoshop</h3>
+<p class="font-label-sm text-label-editorial uppercase tracking-[0.2em] opacity-70 mb-10">Manipulation • Branding • Layout</p>
+<div class="w-full h-[2px] bg-on-primary/20 relative">
+<div class="absolute left-0 top-0 h-full bg-on-primary progress-bar group-hover:bg-primary" style="--target-width: 90%;"></div>
+</div>
+<div class="mt-10 flex flex-col gap-4">
+<p class="font-label-sm text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-60 transition-opacity">CLICK TO VIEW GALLERY</p>
+<p class="font-label-editorial text-[10px] uppercase tracking-[0.4em] opacity-40">TAP ON LOGO TO VIEW IT</p>
+</div>
+</div>
+<!-- After Effects -->
+<div class="border border-on-primary/20 group hover:bg-on-primary hover:text-primary transition-all duration-500 reveal stagger-3 cursor-pointer p-16" id="trigger-after-effects">
+<div class="mb-10 flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl">movie_edit</span>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity text-2xl">open_in_new</span>
+</div>
+<h3 class="font-display-lg text-headline-lg uppercase mb-6">After Effects</h3>
+<p class="font-label-sm text-label-editorial uppercase tracking-[0.2em] opacity-70 mb-10">Motion Graphics • VFX • Kinetic</p>
+<div class="w-full h-[2px] bg-on-primary/20 relative">
+<div class="absolute left-0 top-0 h-full bg-on-primary progress-bar group-hover:bg-primary" style="--target-width: 85%;"></div>
+</div>
+<div class="mt-10 flex flex-col gap-4">
+<p class="font-label-sm text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-60 transition-opacity">CLICK TO VIEW WORKS</p>
+<p class="font-label-editorial text-[10px] uppercase tracking-[0.4em] opacity-40">TAP ON LOGO TO VIEW IT</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: WHAT I DO -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop overflow-hidden" id="services">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 reveal">
+<h2 class="font-display-lg text-display-lg text-primary uppercase">WHAT I DO</h2>
+<p class="font-label-sm text-label-sm uppercase tracking-[0.4em] text-secondary max-w-xs md:text-right">DISCIPLINES &amp; EXPERTISE</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y md:divide-y-0 md:divide-x divide-outline-variant/30">
+<div class="py-16 md:px-8 reveal stagger-1 group hover:bg-surface-variant/40 transition-colors duration-500 cursor-default">
+<span class="font-display-lg text-display-lg text-primary-fixed-dim/30 block mb-8 transition-colors group-hover:text-primary/40">01</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-6">GRAPHIC DESIGN</h3>
+<p class="font-body-md text-on-surface">Editorial layouts, typography-led branding, and high-end digital marketing collateral.</p>
+</div>
+<div class="py-16 md:px-8 reveal stagger-2 group hover:bg-surface-variant/40 transition-colors duration-500 cursor-default">
+<span class="font-display-lg text-display-lg text-primary-fixed-dim/30 block mb-8 transition-colors group-hover:text-primary/40">02</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-6">COLOR GRADING</h3>
+<p class="font-body-md text-on-surface">Mood-based photographic processing and cinematic video grading for emotional impact.</p>
+</div>
+<div class="py-16 md:px-8 reveal stagger-3 group hover:bg-surface-variant/40 transition-colors duration-500 cursor-default">
+<span class="font-display-lg text-display-lg text-primary-fixed-dim/30 block mb-8 transition-colors group-hover:text-primary/40">03</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-6">INSTA STORIES</h3>
+<p class="font-body-md text-on-surface">High-retention social content designed for the mobile-first generation.</p>
+</div>
+<div class="py-16 md:px-8 reveal stagger-4 group hover:bg-surface-variant/40 transition-colors duration-500 cursor-default">
+<span class="font-display-lg text-display-lg text-primary-fixed-dim/30 block mb-8 transition-colors group-hover:text-primary/40">04</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-6">VIDEO EDITING</h3>
+<p class="font-body-md text-on-surface">Dynamic cutting and rhythm-focused editing for commercials and music videos.</p>
+</div>
+</div>
+</section>
+<!-- Section 5: FUTURE VISION -->
+<section class="relative h-[80vh] flex items-center justify-center overflow-hidden" id="vision">
+<div class="absolute inset-0 z-0 bg-primary/10">
+<img class="w-full h-full object-cover opacity-20 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBpCQVL-39cSY1JHkaDixh3rt4CdQdFaBAnFdB1-PlSP-2_6nfPv3m_hVJcxd4FfPQzq7T2auSxjBse0Q934GHFFfhtTP8byrX_EfTtckoDqzIL4Ex4qIl1xikt1XLIrC_DZGA7m0jpFWWN_63x2m5zEdJNNlQ66slNGtQ68RWg8RGegPyv3oHl08sSjJYbYcvRX_qoLQRNRTChjdpGoHmJzr6IQHDt5_yu4UUGkHcxczFkGjSwK-JF5AqTRdk98zdBcGocm32f3Dd"/>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl reveal">
+<h2 class="font-display-xl text-[60px] md:text-display-xl uppercase text-primary mb-8 leading-none">FUTURE VISION</h2>
+<p class="font-body-lg text-body-lg md:text-[32px] md:leading-[1.2] text-on-surface uppercase tracking-tight font-headline-lg">
+                "I DON'T JUST CREATE VISUALS. I BUILD WORLDS WHERE CRAFT MEETS CHAOS, AND STYLE MEETS SUBSTANCE."
+            </p>
+</div>
+</section>
+<!-- Section 6: MY JOURNEY -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-variant/30 overflow-hidden" id="journey">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-display-lg text-display-lg text-primary uppercase text-center mb-24 reveal">MY JOURNEY</h2>
+<div class="relative border-l border-primary/20 pl-8 md:pl-16 space-y-24">
+<div class="relative reveal stagger-1">
+<div class="absolute -left-[41px] md:-left-[73px] top-2 w-4 h-4 bg-primary rounded-full transition-transform duration-500 hover:scale-150"></div>
+<span class="font-display-lg text-primary-container mb-4 block text-4xl">2020</span>
+<h3 class="font-headline-lg text-headline-lg uppercase mb-2">THE SPARK</h3>
+<p class="font-body-md text-on-surface">Started experimenting with mobile editing apps, discovering a natural affinity for visual composition and digital manipulation.</p>
+</div>
+<div class="relative reveal stagger-2">
+<div class="absolute -left-[41px] md:-left-[73px] top-2 w-4 h-4 bg-primary rounded-full transition-transform duration-500 hover:scale-150"></div>
+<span class="font-display-lg text-primary-container mb-4 block text-4xl">2023</span>
+<h3 class="font-headline-lg text-headline-lg uppercase mb-2">PROFESSIONAL PIVOT</h3>
+<p class="font-body-md text-on-surface">Mastered the Adobe Suite. Began working with local clients to redefine their visual presence through cinema-grade content creation.</p>
+</div>
+<div class="relative reveal stagger-3">
+<div class="absolute -left-[41px] md:-left-[73px] top-2 w-4 h-4 bg-primary rounded-full transition-transform duration-500 hover:scale-150"></div>
+<span class="font-display-lg text-primary-container mb-4 block text-4xl">2026</span>
+<h3 class="font-headline-lg text-headline-lg uppercase mb-2">THE EXPANSION</h3>
+<p class="font-body-md text-on-surface">Pushing boundaries in immersive media and high-end brand direction. The vision is global excellence in digital craftsmanship.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: CONTACT -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-primary text-on-primary overflow-hidden" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<div class="reveal">
+<h2 class="font-display-xl text-[60px] md:text-display-xl uppercase leading-none mb-12">LET'S<br/>COLLABORATE</h2>
+<p class="font-body-lg text-body-lg opacity-80 max-w-sm mb-12">I'm always looking for ambitious projects and creators who aren't afraid to push boundaries.</p>
+</div>
+<div class="flex flex-col justify-end space-y-12 reveal stagger-2">
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-widest opacity-60 mb-4">GMAIL</p>
+<a class="font-headline-lg uppercase text-on-primary hover:text-primary-fixed transition-all duration-300 social-hover text-2xl md:text-4xl" href="mailto:bhimanagoudajayawadagi@gmail.com">
+                        bhimanagoudajayawadagi@gmail.com
+                    </a><p class="font-label-sm text-label-sm uppercase tracking-widest opacity-50 mt-2">Tap on the Gmail username to email me.</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-widest opacity-60 mb-4">INSTAGRAM</p>
+<a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-on-primary hover:text-primary-fixed transition-all duration-300 social-hover" href="https://instagram.com/_.bhim_2007" target="_blank">
+                        @_.bhim_2007
+                    </a><p class="font-label-sm text-label-sm uppercase tracking-widest opacity-50 mt-2">Tap on the username to view my Instagram ac</p>
+</div>
+</div>
+</div>
+<div class="mt-40 pt-12 border-t border-on-primary/10 flex flex-col md:flex-row justify-between items-center gap-8 reveal stagger-3">
+<div class="font-display-lg text-primary-fixed-dim text-5xl">BHEEM</div>
+<div class="text-center md:text-right">
+<p class="font-label-sm text-label-sm uppercase tracking-widest mb-2">THANK YOU FOR YOUR TIME</p><p class="font-label-sm uppercase tracking-widest opacity-60 mt-2">For more regular updates, visit Insta Ac</p>
+</div>
+</div>
+</section>
+</main>
+<script>
+    // Custom Cursor Logic
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    const updateInteractiveElements = () => {
+        const interactiveElements = document.querySelectorAll('a, button, .cursor-pointer, .progress-bar');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+        });
+    };
+    updateInteractiveElements();
+
+    // Reveal animation logic
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach(reveal => revealObserver.observe(reveal));
+
+    const progressObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.progress-bar').forEach(bar => progressObserver.observe(bar));
+
+    // Gallery Logic
+    const modal = document.getElementById('gallery-modal');
+    const closeBtn = document.getElementById('close-modal');
+    const galleryContent = document.getElementById('gallery-content');
+    const triggerLightroom = document.getElementById('trigger-lightroom');
+    const triggerPhotoshop = document.getElementById('trigger-photoshop');
+    const dynamicTitle = document.getElementById('modal-dynamic-title');
+    const dynamicDescription = document.getElementById('modal-dynamic-description');
+
+    const lightroomData = {
+        title: 'LIGHTROOM<br/><span class="opacity-40">COLLECTION</span>',
+        description: 'A visual dialogue between light and shadow. This collection captures the raw, cinematic textures of everyday journeys and the silent majesty of nature\'s landscapes.',
+        images: [
+            { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDED7M8W9_YkpRzB8uiSGXiUM5eUwnSlkY7TRJO99_yW9rfJwlXyiDSJziHneGNSpNXtoPvYHVhy-94nK4JW_HvZ7TntiUYAyRXO1U6gPyMmKojNKow164mQFtN2LfHa0rNueCUnLir9TIhAK7ORnIkH6tKw94-RM_7subVLmSnB8N793mubTf8S2C-YR_TzrabtV9uR3slhC9OaVppJq0liS_vcllimudA4jtQx437TDQ8c9YB3liTaJM7QdhDfFI2h9qtHdUp4WE", title: "GOLDEN HOUR", meta: "01 / WARMTH" },
+            { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuD60XLHjM_Kgdvx5vri63phMLX-KFP_0lpLDxpg9wfjmczYJWlCEW9YA5BcI3rVW0JX2rxYrRk8tEEsyS1WBrFfnP8g_svOFsmSc6Y3jCBzP-_h8Wo3PrD_tuDQfa1t48iMoOcQDs_PE0NOyckwF50LtVPwxMJyvpZUkfmXo1gtOjGwpgzJBRvV5zmoyBMMveI8Gaiqqrj6XE3JW6PGI611h8Zuss279wf9nr37AuGvUkOcPJ8UrkkdPsP1U3CwRd8itnj4FKUBP7E", title: "URBAN FLORA", meta: "02 / CONTRAST" },
+            { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuD6lqh5WytUqz-HxlaQ5lsrEJc7qfOhutP1dwun5ZDmRZkjqIj7pfciBhnIDYed_Nlwl_fAAgEd4D4bKCDYfWQYKOR1R0onZeUtPEl4nrMs4L1QtSOJDuAwqwbfhgfKVQaET-ESUSgSiFpKk6VHx7dmm00TKaHeu8l7RDN2ZfCyMh2KElR_hSnc7lYAoFdz_yvBfiYAs0i8RViYBuE3lyD_isC1v70GLLkWO9-xaINIEluXz1JCKZ0MiX2Pk5mf7S_GWqGYk0z1DBY", title: "TWIN CITIES", meta: "03 / PERSPECTIVE" },
+            { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBnI_xyEZSAld1lBrQelEtCc5xKPXhUdznJbJznVl5OndP8zk4r06DCogOCsZsby11xi_Yp2uZqc_hKFg3nRGaDlZsWAaWeNOjNyzKVVjgLRCytbktbfRiAjst9ZN2Nu_Xz2nRPF3Kl6Mtij14wvWnnszntr4LzTIrG8nXbI1bT-88EigMBcO-ONc-P9vhdETgEX9DBvEgPOqQeVmqUlBDd9Y_TnAVZ0okGc4ICIW_Fh_lzaLwiu8aVrUy7xPUS11fhMGjVNIcTg2s", title: "THE DEPOT", meta: "04 / STILLNESS" },
+            { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAJnLdN0zuahPlER52rMfHdqV12sUBEHGzzgcjdB8x7qlfdHOMdeQUJ77IfE6NEAQ0tsEnpsyNBXSy6oeYv0MrAdHGwrribARQtSyYB7QjTG2hpKOhnooBQwhXz3YxOP6nNoU2EL7vsis5ZGwYxLk5Yl5buC2-f3Jodi5cmZhpRD2I_DKjUv5VUp4WvAbGX5iTW6_70_aaIiTPLY98drcsPGtU7wx8_9taO2ayhiz_7CgyNEOC0FestatPMwnGScl04HiNLE9kENUo", title: "RADIANCE", meta: "05 / LIGHT" },
+            { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBFRl5HBCxLM8tQMSFobTnYPJyRLTM6LnQh_RE1fj0iwE2EwK27WXw31BgZpb6GxNfdi6Iu2UjyEok-tb3wUFNAG0OkcljXDVI7FlBCcveOF_eOlYNtUmrDU1zYuydyOIO0g32WiICGkT0opta47jSnJJqjLIjMsj5M7jKyc3_CfL1Qo0RkFw5QMLNQ0WkBKKcQRXLz1vQiXQ2sXsvAvbYpKifW2pSgyv_x2wrvedvhOu_UTFxbsEZcKupdspKNUT6Olaq_FL0Kg2M", title: "ROAD TRIP", meta: "06 / MOMENTUM" },
+            { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBIKjrQ_KnFClspVxw2LIvhVXr80xLrXdphzGtupO24pgSi8PsmqRbWbOblV5SG4MAMQvc-WdcHHp4x453zvhMjeQyrAZIVSfDDy7_t4t9AQq08yrww3gESNibI-Wrp6F7p22m3BLwGDGqzGmUITuSsV4rvQJsPWS1NsJEmQCjhV0mcU3zzTsvAF7LV1qoPUIjLX4iCcrLNryjnaO6J4a-i6NPEJ9-BeVRcy8mYp01W216RsEbtGnyUS3dbhmEJ3GZvehgALPHyf84", title: "VALLEY VIEW", meta: "07 / HORIZON" },
+            { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBv3yR3iVQDr13nXc3NaNm6sp-6zF0e_13v12sfbdcuz52f0Lmfb1ez1SMmyj9rDvW6Vf0uSfDGA72xtim_w-HCYsPxyjjqhzq2W_eZRD_FR96wH3ceCNIhMN7RDEOxPfVoFOup4qjzArz6-QNtifCeo1WPbwhwPpJFD8s-joONEvSLSbHknSb8CLCFo-1fhn8smtIrVyI040-aGgyxSPURfekXC-mZwfQbFaEvYp6h2dbTWaHndbChqvIci954T20a76uYa7-NAjY", title: "THE FALLS", meta: "08 / RAW" },
+            { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuD9u6CVnqhZXQpFVtrrdrivvcx-BKA-2ytS2_tD6vCHL3fbIkgedOS63eTX5d3ICG357HHt_WUGonrb1S6pGy-1jRnUCsJ8eh00-JLFRpmq8D3QiUQpcAJoebtlJeUYb9tM4246cNJzCb-VeblwyCB-ItjLVJ4k8YPWgjreWLx78AvSWZSI_VjSaEWexhrhbhCzkfY9XtJnRXBdFuvd543wgbW01dtfCgcQsFvK5_AQvZVCk8sjGlPxD0R4pzP3uPpFoZquuZjY-5A", title: "MOODY SEASON", meta: "09 / ATMOSPHERE" },
+            { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDvZtZayBFN9E9k_8ReuvSJJNkO_bScTHT-u-i3fb5JLl60pqDUUmTbpYiZqCi9NqJN9mulzG54WNs9Yag1o-iA-6eR7CrzX0DPwZC4i-pk7XwcqmEqyWWnRjUveE3kjVmYGurZa4Kb0i6TUsyi0RGC7M58oZXCsHtRvgRArODawIxut2vs1JtF9ej2zvLPuD1V7C5TUujadFUq7i1-u7fJjAZ50mDCil35HQy_sNK5OGltW5rbFDuTAaIxCzz8bpHbHKzDHF1Livo", title: "DRIVE BY", meta: "10 / VIBE" },
+            { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuB_5STVyaL9ScjteINjSzZgJfnvD4jLV0zvUDyqJf3sAqFdlmXkSQRgdOnFx1GsVmgKSCTOcqNoC7AlNTGigabyPptJjdAV_YkCEnh_YbkRADPxRc3ls5umkkZqAlBy8jF1GbCQ-i3Q4BGq-iI1XnZC3tqrhZ4sBI9N95b63tw7hGqjqZHUNSkmLOTeBG3XNP8faQW8MoKvYL2AEftIDNwZxkREPEx7D1-zZE4UKdTxsfCNUDMwheN34flz5zZl7uIS5QCdaoogr3Y", title: "ROOTS", meta: "11 / FINALE" }
+        ]
+    };
+
+    const photoshopImages = [
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuAKrbwXQJTp4o2B6Yq-iXMtvuTx98Ea3gkK3yF3mBmX21yg0BeP4n8ZtLUwSWAaep7x2NJFDh7mXWNZtcbEs_xQhliNRaUDQ1mTsWVaLJ0UTV8fRCjiPBRaVT4ms8PoKO-CHvPD0A_wkTY4oJ-_vreP_FWkJ4Br9Q0g1SF9pfsmSoByK_ka46r7p-1X7ljr9aA39dlBeoumW0tsYFZQpg5Q_CBdvePLb4M2OiVlOZexBwKr0j5DWh6aqON8na6X6E-RxngwBqy0m_0",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBFI_Ad0RxSGS5U7jVFEwsli7z8POUdPPnOOII8dnp8eNX72w4rkZozkjeScnR0Q4xjk6ipwOU8WYdEZeuPcocBmrTW9wkA4rDhNgHbgyUg_ESQW3w8tVNf9LNlq21o6UuSfax2au1pVt6-oC99WgYRJ6uMEvWWJMI5nugPmiPG8B-JbNrTs18_Tc0K1UjrEs0rcs5Qlpo_Y22ODerYECEat9xA8QlEHwyObQ60Om8q36FbIk1zUwS4N1SPygtixYeVHA2PHFtDNnpz",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDIVU0hQCUaUmBwfft3CZNUedUD6jYjwQFY-e1ZHFCKsDBJVzlresK2nf6EtXrPIw0z75ix9Ayj3qZjETVhouGduFS29viXLP-IqJyqADa4r05lhV7bdjUtleny45qtS_FKSuv8xyeXodVv34WFtjqUkL1HrKdZQCXf-CS1jy1gGsjWjNgPwgBg5TObUy3b2978priMvJBFqbbaGJJmyaxkgDaM3Kszk9GPgY6toPp-ef9KptPPWffqt1nZSCtiKhwPWQWSIUxCZWdW",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuD5I_T_bUxpzU11JZOdY1ouK5xBwj-rDQ8dY548cQbBQGYx2Xah_e4fxZmOiX7GpQyozyJD9uISmnA6niHSQYcZK0MF7UNQnA0TyJkOXWOM5jDDVQe2CdFvg3Sk32rN3R1DzRAw2tI5M2A0jhMETQw3IWc24-AetM3gJvn8lvmF77sFUe5rfa_6UvvuokONAr4SciUhI-ORBu97IOZxSvbp9p8cvbk9OFyjn2TgBYjENb4QbOT6iLeOCUTwtXOGuDlyo_AaKC70XhFQ",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDdmFE2-S0F7-rFIu1uSmFMD1iJ-yoyLg7SvNYSOcHxeZCd7JthThwAvpqU6cFv9Wvrzr8iZoGgLz1zecyKv_sPtyMKDsbXFBD7CFclPfG3ycPZ92zQcARH8H08Kfrc0m_t5imt3d8pBuuadrLvTYFs91XWgOncq9uUBRuZpjaccOx1kLR00fSzNBnytXvfW6JSAYPhHMXOkyrWCHWDcZTaG7rUkmxnCQnBUESv88q8SL6QadPohis8-J94gLFm1tifvGTQxIsSCWTD",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuD0xzfIskYGHsuDLq-vIMr9Wd9gHiLFeSk_BN44zi7k8FxrZiU1xeJo3pZ9wUmiYvg9t2u2AsoIyxL6P87l2zLqVUv79gwL-k0XLpp7IbNNR2jP4h8_YnRCaKWrpErf81JajCnkZgCBvD1c1VuyGUYMsrkkIEuDwWOlHa3j9e-aV7hhpuIRNdjI32K-T_4yHSVnu1lcx1t9Um-2gkAC74BZvA29CYAKlPVyXpXF57v8Pd3hQ-gxa1i1i-YkKkCBqK-Lk1PR3YEIkUwJ",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuCyhYGVEK0-jRCuetB2FWYOBTFHodq4ZZlviMs5-T1LE8k2B0bAF5dwwxQIRBRl2HgKMIkBuHv5vHXo9oJXPk9fLMldfMgMBC7mbpvoUMI_hAkxJxuLq7QLiDb0m87xKwF1SKGQ0EhFIk31steTd9WEzks1Or02auQm9batwObd8QOPgDUZRie46ZOMNHUGGVZbnlTpDupRlM5R3ddMo2nqKZR7FjZnrqi3uOXPCgeYp9e6-FuZqiGFAqL5L9sbbf_t9ppAnUbI2S8",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuAeplb6qMq16aQ4Z91YGDza-upche9GOpzF3X7UMGcWeYqhqMSrvc32aEvYYskcY-DJr1xx-_J6dErTDvhtlpbBrtEtCWxrAOJBZ8O3fAd5sUjzT5_-0SkqKjDXOHtXjFyJVpZTimXdwkzKCo2HqyCo7ibifFwV4JscZQAMAeR3u_yHmsOazbGEkv79ckvObyePoTQl7OOtFjRN6461O4V0xwISU8gB6vxxfU-Mn2xF2fkM7Is064djTQ_OlkiRdHIiSs1vu7M7SQg",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBtNYzAj39a2_2QERyE20Pf3uMm6AFcOL02LQaS-1jg_pm-q94O4WEqvKiSCeaW51TyEmMwSo7PPDrmUfG8uG0DaMqXyHzD1DMC5sO3SjsS3k_PhNkCtwttd91blW_2dmkB4dXqbyOuGnfBNYSumnht2TF7p1vnU_6hUFxUPFk2_XmmZuQD-rnauNJSRycejGujWGSdf0e85sfkb3lBWE4TAOGvDHQiZyUKoLeHM1iiW6vT3phcrC9U-jHYYpmEq9tNE-Ts25n9Qgo"
+    ];
+
+    function openGallery(type) {
+        galleryContent.innerHTML = '';
+        if (type === 'lightroom') {
+            dynamicTitle.innerHTML = lightroomData.title;
+            dynamicDescription.innerText = lightroomData.description;
+            lightroomData.images.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'masonry-item reveal active opacity-0 transition-all duration-700 transform translate-y-10 group';
+                div.innerHTML = `
+                    <div class="gallery-image-wrapper border border-outline-variant/30 p-2 md:p-4">
+                        <img src="${item.src}" alt="${item.title}" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <div class="mt-4 flex flex-col px-2">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="font-headline-lg text-headline-lg-mobile text-primary uppercase">${item.title}</h3>
+                            <span class="font-label-editorial text-label-editorial text-on-surface-variant">${item.meta}</span>
+                        </div>
+                        <p class="font-label-sm text-[10px] uppercase tracking-widest mt-2 opacity-60">tap on the image to make colour grading</p>
+                    </div>
+                `;
+                galleryContent.appendChild(div);
+                setTimeout(() => div.classList.remove('opacity-0', 'translate-y-10'), index * 100);
+            });
+        } else if (type === 'photoshop') {
+            dynamicTitle.innerHTML = 'PHOTOSHOP<br/><span class="opacity-40">PORTFOLIO</span>';
+            dynamicDescription.innerText = 'Meticulous digital craftsmanship ranging from high-end retouching to comprehensive visual branding and editorial layout designs.';
+            photoshopImages.forEach((src, index) => {
+                const div = document.createElement('div');
+                div.className = 'masonry-item reveal active opacity-0 transition-all duration-700 transform translate-y-10 border border-primary/10 p-2 bg-white/5';
+                div.innerHTML = `
+                    <img src="${src}" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 rounded-sm">
+                    <p class="font-label-sm text-[10px] uppercase tracking-widest mt-2 opacity-60 px-2">Tap on the image to make it color.</p>
+                `;
+                galleryContent.appendChild(div);
+                setTimeout(() => div.classList.remove('opacity-0', 'translate-y-10'), index * 100);
+            });
+        }
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+
+    triggerLightroom.addEventListener('click', () => openGallery('lightroom'));
+    triggerPhotoshop.addEventListener('click', () => openGallery('photoshop'));
+    
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+    });
+
+    document.getElementById('trigger-after-effects').addEventListener('click', () => {
+        window.open('https://drive.google.com/drive/folders/12dXzbOa7H0Zp3laNrqh9FdkjO4Fp3_gX', '_blank');
+    });
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeBtn.click();
+    });
+</script>
+</body></html>
